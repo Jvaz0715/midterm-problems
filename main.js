@@ -37,8 +37,14 @@ function exclaim(str) {
 //console.log(exclaim('Hello'))
 //console.log(exclaim('Hello!!!'))
 
-function countWords() {
+function countWords(str) {
+  let wordArray = str.split(' ');
+  let wordCount = wordArray.length;
+  return wordCount;
 }
+
+//console.log(countWords('James Vazquez was here'))
+
 
 function containsDigit() {
 }
