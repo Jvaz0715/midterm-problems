@@ -77,12 +77,13 @@ function containsLowerCase(str) {
   }
 }
 
-console.log(containsLowerCase('hello'))
-console.log(containsLowerCase('Hello'))
-console.log(containsLowerCase('hELLO'))
 
-
-function containsUpperCase() {
+function containsUpperCase(str) {
+  if (str !== str.toLowerCase()) {
+    return true;
+  } else if (str === str.toLowerCase()) {
+    return false;
+  }
 }
 
 function containsNonAlphanumeric() {
