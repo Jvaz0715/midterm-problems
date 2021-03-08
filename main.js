@@ -89,14 +89,32 @@ function containsUpperCase(str) {
 function containsNonAlphanumeric() {
 }
 
-function containsSpace() {
+function containsSpace(str) {
+  if (str.includes(' ')) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
-function digits(num) {
+function digits() {
 }
 
-function truncate() {
+function truncate(str) {
+  let outputString = '';
+  if (str.length < 15) {
+    return str;
+  }
+
+  for (let i = 0; i < 15; i++) {
+    if (str.length > 15){
+    outputString = outputString + str[i];
+    } 
+  }
+  return outputString + '...'
 }
+
+console.log(truncate('Hello my name is James V. and I am coding'))
 
 function isValidPassword() {
 }
