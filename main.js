@@ -22,8 +22,6 @@ function isLong(str) {
   } 
 }
 
-
-// still needs to account for multiple exclamation points
 function exclaim(str) {
   let lastIndex = str[str.length -1];
   let noExclaims = str.replaceAll('!', '')
@@ -46,10 +44,31 @@ function countWords(str) {
 //console.log(countWords('James Vazquez was here'))
 
 
-function containsDigit() {
+function containsDigit(str) {
+  for (i = 0; i < str.length; i++) {
+    let char = str[i];
+    if (
+      char === '0' ||
+      char === '1' ||
+      char === '2' ||
+      char === '3' ||
+      char === '4' ||
+      char === '5' ||
+      char === '6' ||
+      char === '7' ||
+      char === '8' ||
+      char === '9') {
+        return true;
+      } else {
+        return false;
+      }
+  }
 }
 
-function containsLowerCase() {
+console.log(containsDigit('18881'))
+
+function containsLowerCase(str) {
+  
 }
 
 function containsUpperCase() {
@@ -61,8 +80,11 @@ function containsNonAlphanumeric() {
 function containsSpace() {
 }
 
-function digits() {
+function digits() { 
 }
+
+console.log(digits(10001))
+
 
 function truncate() {
 }
