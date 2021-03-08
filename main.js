@@ -69,11 +69,18 @@ function containsDigit(str) {
   }
 }
 
-console.log(containsDigit('188cxxx81'))
-
-function containsLowerCase() {
-  
+function containsLowerCase(str) {
+  if (str !== str.toUpperCase()) {
+    return true;
+  } else if (str === str.toUpperCase()) {
+    return false;
+  }
 }
+
+console.log(containsLowerCase('hello'))
+console.log(containsLowerCase('Hello'))
+console.log(containsLowerCase('hELLO'))
+
 
 function containsUpperCase() {
 }
