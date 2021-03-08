@@ -102,21 +102,21 @@ function digits() {
 
 function truncate(str) {
   let outputString = '';
-  if (str.length < 15) {
+  if (str.length <= 14) {
     return str;
   }
 
-  for (let i = 0; i < 15; i++) {
-    if (str.length > 15){
+  for (let i = 0; i < 8; i++) {
+    if (str.length >= 15){
     outputString = outputString + str[i];
     } 
   }
   return outputString + '...'
 }
 
-console.log(truncate('Hello my name is James V. and I am coding'))
+//console.log(truncate('Hello my name is James V. and I am coding'))
 
-function isValidPassword() {
+function isValidPassword(str) {
 }
 
 function onlyPunchy() {
