@@ -22,8 +22,20 @@ function isLong(str) {
   } 
 }
 
-function exclaim() {
+
+// still needs to account for multiple exclamation points
+function exclaim(str) {
+  let lastIndex = str[str.length -1];
+  let noExclaims = str.replaceAll('!', '')
+  if (lastIndex !== '!') {
+    return str + '!';
+  } else {
+    return noExclaims + '!'
+  }
 }
+
+//console.log(exclaim('Hello'))
+//console.log(exclaim('Hello!!!'))
 
 function countWords() {
 }
