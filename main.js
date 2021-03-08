@@ -1,10 +1,25 @@
-function isEvenlyDivisible() {
+function isEvenlyDivisible(x, y) {
+  if (x % y === 0) {
+    return true;
+  } else {
+    return false
+  }
 }
 
-function halfSquare() {
+function halfSquare(num) {
+  let numSquared = num * num;
+  let numSquaredHalf = numSquared / 2;
+  return numSquaredHalf;
 }
 
-function isLong() {
+//console.log(halfSquare(8))
+
+function isLong(str) {
+  if (str.length >= 15) {
+    return true;
+  } else {
+    return false;
+  } 
 }
 
 function exclaim() {
