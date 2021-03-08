@@ -59,15 +59,19 @@ function containsDigit(str) {
       char === '8' ||
       char === '9') {
         return true;
-      } else {
-        return false;
       }
+  }
+  
+  if (str.length < 1){
+    return false;
+  } else {
+    return false;
   }
 }
 
-console.log(containsDigit('18881'))
+console.log(containsDigit('188cxxx81'))
 
-function containsLowerCase(str) {
+function containsLowerCase() {
   
 }
 
@@ -80,11 +84,8 @@ function containsNonAlphanumeric() {
 function containsSpace() {
 }
 
-function digits() { 
+function digits(num) {
 }
-
-console.log(digits(10001))
-
 
 function truncate() {
 }
