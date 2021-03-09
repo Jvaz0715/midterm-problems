@@ -138,7 +138,14 @@ function truncate(str) {
 
 //console.log(truncate('Hello my name is James V. and I am coding'))
 
-function isValidPassword() {
+function isValidPassword(str) {
+  if (str !== str.toUpperCase()) {
+    return false;
+  } else if (str === str.toUpperCase()) {
+    return false;
+  } else if (!str.includes(' ')) {
+    return true;
+  }
 }
 
 function onlyPunchy() {
