@@ -88,7 +88,11 @@ function containsUpperCase(str) {
 
 function containsNonAlphanumeric(str) {
   let char = str[i];
-  if (str.length < 1) {return false}
+  if (str.length < 1) {
+    return false;
+  } else {
+    return true;
+  }
 }
 
 function containsSpace(str) {
