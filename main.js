@@ -112,10 +112,21 @@ function digits(num) {
   let numString = num.toString();
   for (let i = 0; i < numString.length; i++) {
     let numberAgain = Number(numString[i]);
-    if (numberAgain !== NaN){
+    if (
+      numberAgain === 0 ||
+      numberAgain === 1 ||
+      numberAgain === 2 ||
+      numberAgain === 3 ||
+      numberAgain === 4 ||
+      numberAgain === 5 ||
+      numberAgain === 6 ||
+      numberAgain === 7 ||
+      numberAgain === 8 ||
+      numberAgain === 9
+      ) {
       output.push(numberAgain);
-  }
     }
+  }
   return output;
 }
 
@@ -141,7 +152,7 @@ function truncate(str) {
 function isValidPassword(str) {
   if (str !== str.toUpperCase()) {
     return false;
-  } else if (str === str.toUpperCase()) {
+  } else if (str !== str.toLowerCase()) {
     return false;
   } else if (!str.includes(' ')) {
     return true;
