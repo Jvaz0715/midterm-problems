@@ -90,8 +90,10 @@ function containsNonAlphanumeric(str) {
   let char = str[i];
   if (str.length < 1) {
     return false;
-  } else if (str.includes('/^[a-z0-9]+$/i')) {
-    return true;
+  } else if (/^[a-zA-Z]+$/.test(str)) {
+    return false;
+  }else if (/^[0-9]+$/.test(str)) {
+    return false;
   } else {
     return true;
   }
