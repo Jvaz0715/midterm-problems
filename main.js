@@ -86,7 +86,9 @@ function containsUpperCase(str) {
   }
 }
 
-function containsNonAlphanumeric() {
+function containsNonAlphanumeric(str) {
+  let char = str[i];
+  if (str.length < 1) {return false}
 }
 
 function containsSpace(str) {
@@ -97,8 +99,20 @@ function containsSpace(str) {
   }
 }
 
-function digits() {
+function digits(num) {
+  /*let output = [];
+  let numString = num.toString();
+  for (let i = 0; i < numString.length; i++) {
+    let numberAgain = Number(numString[i]);
+    if (numberAgain !== NaN){
+      output.push(numberAgain);
+  }
+    }
+  return output;*/
 }
+
+console.log(digits(1234))
+console.log(digits(-1234))
 
 function truncate(str) {
   let outputString = '';
@@ -116,12 +130,11 @@ function truncate(str) {
 
 //console.log(truncate('Hello my name is James V. and I am coding'))
 
-function isValidPassword(str) {
+function isValidPassword() {
 }
 
 function onlyPunchy() {
 }
-
 
 module.exports = {
   isEvenlyDivisible,
