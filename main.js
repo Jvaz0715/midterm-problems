@@ -90,6 +90,8 @@ function containsNonAlphanumeric(str) {
   let char = str[i];
   if (str.length < 1) {
     return false;
+  } else if (str.includes('/^[a-z0-9]+$/i')) {
+    return true;
   } else {
     return true;
   }
@@ -104,7 +106,7 @@ function containsSpace(str) {
 }
 
 function digits(num) {
-  /*let output = [];
+  let output = [];
   let numString = num.toString();
   for (let i = 0; i < numString.length; i++) {
     let numberAgain = Number(numString[i]);
@@ -112,7 +114,7 @@ function digits(num) {
       output.push(numberAgain);
   }
     }
-  return output;*/
+  return output;
 }
 
 console.log(digits(1234))
